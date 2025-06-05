@@ -18,16 +18,24 @@
     margin-top: 1rem;
   }
 
-  .nav-links.show {
-    display: flex;
-  }
+.nav-links.show {
+  display: flex;
+}
+
 .profile-pic {
   width: 150px;
   border-radius: 50%;
   margin-top: 1rem;
-  html {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Smooth scrolling */
+html {
   scroll-behavior: smooth;
 }
+
   .nav-links li {
     padding: 0.5rem 1rem;
     border-top: 1px solid #444;
