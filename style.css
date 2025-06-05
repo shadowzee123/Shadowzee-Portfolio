@@ -25,6 +25,8 @@
   width: 150px;
   border-radius: 50%;
   margin-top: 1rem;
+  html {
+  scroll-behavior: smooth;
 }
   .nav-links li {
     padding: 0.5rem 1rem;
