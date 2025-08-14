@@ -1,62 +1,44 @@
-import React, { useState } from "react";
-import { db } from "./firebase";
+import { db } from "firebase"; // your firebase config
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import './ContactForm.css'; // Import the CSS
 
 const ContactForm = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [success, setSuccess] = useState("");
+  const form = useRef();
 
-  const handleSubmit = async (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
 
-    try {
-      await addDoc(collection(db, "messages"), {
-        name,
-        email,
-        message,
-        timestamp: serverTimestamp()
-      });
-
-      setSuccess("Message sent successfully!");
-      setName("");
-      setEmail("");
-      setMessage("");
-    } catch (error) {
-      console.error("Error sending message:", error);
-    }
+    emailjs.sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      form.current,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+    .then(() => {
+      alert('✅ Message sent successfully!');
+      form.current.reset();
+    })
+    .catch((error) => {
+      console.error('❌ Failed to send message:', error);
+      alert('❌ Message failed to send, please try again.');
+    });
   };
 
   return (
-    <div>
-      <h2>Contact Us</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Your Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
-        <input
-          type="email"
-          placeholder="Your Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <textarea
-          placeholder="Your Message"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          required
-        ></textarea>
-        <button type="submit">Send</button>
+    <div className="contact-container">
+      <h2>Contact Me</h2>
+      <form ref={form} onSubmit={sendEmail}>
+        <input type="text" name="user_name" placeholder="Your Name" required />
+        <input type="email" name="user_email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Write your message..." required></textarea>
+        <button type="submit">Send Message</button>
       </form>
-      {success && <p style={{ color: "green" }}>{success}</p>}
     </div>
   );
 };
 
 export default ContactForm;
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
