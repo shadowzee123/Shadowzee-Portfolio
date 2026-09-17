@@ -1,204 +1,563 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Abba Ado Bawa | Portfolio</title>
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  
-  <!-- Font Awesome for social icons -->
-  <link
+  <meta name="viewport" content="width=device-width, initial-scale=1" />  <title>Abba Ado Bawa | Full Stack Developer</title>  <!-- Google Fonts -->  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />  <!-- Font Awesome -->  <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
-  />
-  
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  />  <!-- Main CSS -->  <link rel="stylesheet" href="style.css" />
+</head><body>  <!-- ==================== NAVIGATION ==================== -->  <header class="navbar"><h1 class="logo">Shadowzee Portfolio</h1>
 
-  <!-- Navigation -->
-  <header class="navbar">
-    <h1 class="logo">Shadowzee Portfolio</h1>
-    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
-    <nav>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-        <li>
-          <button id="darkModeToggle" class="dark-mode-btn" aria-label="Toggle Dark Mode">
-            <i class="fa-regular fa-moon"></i>
-          </button>
-        </li>
-      </ul>
-    </nav>
-  </header>
+<button
+  class="menu-toggle"
+  id="menu-toggle"
+  aria-label="Toggle navigation menu"
+>
+  &#9776;
+</button>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero section">
-    <h2>Hello, I'm <span class="highlight">Abba Ado Bawa</span></h2>
-    <p>A Full Stack Developer crafting scalable and efficient web applications.</p>
-    <a href="#projects" class="btn">View My Work</a>
-  </section>
+<nav>
+  <ul class="nav-links" id="nav-links">
 
-  <!-- About Section -->
-  <section id="about" class="section about-section">
-    <img src="profile.jpg" alt="Abba Ado Bawa Profile Photo" class="profile-pic" />
-    <div>
-      <h2>About Me</h2>
-      <p>
-        I'm a passionate Full Stack Developer skilled in both frontend and backend technologies.
-        I build user-friendly, scalable, and efficient web applications with clean code.
-        Experienced in HTML, CSS, JavaScript, React, Node.js, Express, and databases like MongoDB and Firebase.
-        Always eager to learn and improve.
-      </p>
-    </div>
-  </section>
+    <li>
+      <a href="#home" class="nav-link">Home</a>
+    </li>
 
-  <!-- Skills Section -->
-  <section id="skills" class="section skills-section">
-    <h2>My Skills</h2>
-    <ul class="skills-list">
-      <li>HTML5</li>
-      <li>CSS3 (Flexbox, Grid, Responsive Design)</li>
-      <li>JavaScript (ES6+)</li>
-      <li>React.js</li>
-      <li>Tailwind CSS</li>
-      <li>Node.js</li>
-      <li>Firebase Authentication & Firestore</li>
-      <li>Git & GitHub</li>
-      <li>NPM & Build Tools (Webpack, Vite)</li>
-      <li>RESTful APIs</li>
-      <li>Responsive Web Design & Accessibility</li>
-      <li>Chrome DevTools & Debugging</li>
-      <li>JSON & Command Line Basics</li>
-    </ul>
-  </section>
+    <li>
+      <a href="#about" class="nav-link">About</a>
+    </li>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section projects-section">
-    <h2>My Projects</h2>
-    <div class="projects-grid">
-      <article className="project-card">
-  <h3>YCKF Platform</h3>
+    <li>
+      <a href="#skills" class="nav-link">Skills</a>
+    </li>
+
+    <li>
+      <a href="#projects" class="nav-link">Projects</a>
+    </li>
+
+    <li>
+      <a href="#contact" class="nav-link">Contact</a>
+    </li>
+
+    <li>
+      <button
+        id="darkModeToggle"
+        class="dark-mode-btn"
+        aria-label="Toggle Dark Mode"
+      >
+        <i class="fa-regular fa-moon"></i>
+      </button>
+    </li>
+
+  </ul>
+</nav>
+
+  </header>  <!-- ==================== HERO SECTION ==================== -->  <section id="home" class="hero section"><h2>
+  Hello, I'm
+  <span class="highlight">Abba Ado Bawa</span>
+</h2>
+
+<p>
+  A Full Stack Developer building responsive, scalable, and
+  user-friendly web applications.
+</p>
+
+<a href="#projects" class="btn">
+  View My Work
+</a>
+
+  </section>  <!-- ==================== ABOUT SECTION ==================== -->  <section id="about" class="section about-section"><img
+  src="profile.jpg"
+  alt="Abba Ado Bawa Profile Photo"
+  class="profile-pic"
+/>
+
+<div>
+
+  <h2>About Me</h2>
 
   <p>
-    A full-stack education and donation platform built with Vue,
-    TypeScript, Node.js, Express, Prisma, and SQLite. The platform
-    includes authentication, student and admin dashboards, role-based
-    access, donation management, certificate verification, blogs,
-    complaints, and payment tracking.
+    I'm a passionate Full Stack Developer who enjoys building
+    modern, user-friendly, and scalable web applications. I work
+    across both frontend and backend technologies, with experience
+    in JavaScript, React, Vue, Node.js, Express, Firebase, Prisma,
+    and databases.
   </p>
 
-  <div className="project-tech">
-    <span>Vue</span>
-    <span>TypeScript</span>
-    <span>Node.js</span>
-    <span>Express</span>
-    <span>Prisma</span>
-    <span>SQLite</span>
-    <span>Tailwind CSS</span>
-  </div>
+  <p>
+    I enjoy turning ideas into functional digital products while
+    continuously improving my development skills and learning new
+    technologies.
+  </p>
 
-  <div className="project-buttons">
+</div>
+
+  </section>  <!-- ==================== SKILLS SECTION ==================== -->  <section id="skills" class="section skills-section"><h2>My Skills</h2>
+
+<ul class="skills-list">
+
+  <li>HTML5</li>
+
+  <li>CSS3</li>
+
+  <li>Responsive Web Design</li>
+
+  <li>JavaScript ES6+</li>
+
+  <li>React.js</li>
+
+  <li>Vue.js</li>
+
+  <li>TypeScript</li>
+
+  <li>Tailwind CSS</li>
+
+  <li>Node.js</li>
+
+  <li>Express.js</li>
+
+  <li>Firebase Authentication & Firestore</li>
+
+  <li>Prisma ORM</li>
+
+  <li>SQLite</li>
+
+  <li>MongoDB</li>
+
+  <li>RESTful APIs</li>
+
+  <li>Git & GitHub</li>
+
+  <li>NPM & Build Tools</li>
+
+  <li>Vite</li>
+
+  <li>Chrome DevTools</li>
+
+  <li>Debugging</li>
+
+  <li>JSON</li>
+
+  <li>Command Line Basics</li>
+
+</ul>
+
+  </section>  <!-- ==================== PROJECTS SECTION ==================== -->  <section id="projects" class="section projects-section"><h2>My Projects</h2>
+
+<div class="projects-grid">
+
+
+  <!-- YCKF PLATFORM -->
+  <article class="project-card">
+
+    <h3>YCKF Platform</h3>
+
+    <p>
+      A full-stack education and donation platform built with Vue,
+      TypeScript, Node.js, Express, Prisma, and SQLite. The platform
+      includes authentication, student and admin dashboards,
+      role-based access, donation management, certificate
+      verification, blogs, complaints, and payment tracking.
+    </p>
+
+    <div class="project-tech">
+
+      <span>Vue</span>
+      <span>TypeScript</span>
+      <span>Node.js</span>
+      <span>Express</span>
+      <span>Prisma</span>
+      <span>SQLite</span>
+      <span>Tailwind CSS</span>
+
+    </div>
+
+    <div class="project-buttons">
+
+      <a
+        href="https://shadowzee123.github.io/yckf-starter/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="project-link"
+      >
+        Live Demo
+      </a>
+
+      <a
+        href="https://github.com/shadowzee123/yckf-starter"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="project-link"
+      >
+        GitHub
+      </a>
+
+    </div>
+
+  </article>
+
+
+  <!-- SHADOWZEE PORTFOLIO -->
+  <article class="project-card">
+
+    <h3>Shadowzee Portfolio</h3>
+
+    <p>
+      A responsive developer portfolio showcasing my full-stack
+      development skills, technical experience, projects, and
+      web applications.
+    </p>
+
+    <div class="project-tech">
+
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>Responsive Design</span>
+
+    </div>
+
     <a
-      href="https://shadowzee123.github.io/yckf-starter/"
+      href="https://shadowzee123.github.io/Shadowzee-Portfolio/"
+      class="project-link"
       target="_blank"
       rel="noopener noreferrer"
-      className="project-link"
     >
-      Live Demo
+      View Project
     </a>
+
+  </article>
+
+
+  <!-- GET A JOB APP -->
+  <article class="project-card">
+
+    <h3>Get A Job App</h3>
+
+    <p>
+      A React-based job listing application designed to help users
+      browse job opportunities, search listings, and save jobs.
+    </p>
+
+    <div class="project-tech">
+
+      <span>React</span>
+      <span>JavaScript</span>
+      <span>CSS</span>
+
+    </div>
 
     <a
-      href="https://github.com/shadowzee123/yckf-starter"
+      href="https://shadowzee123.github.io/get-a-job/"
+      class="project-link"
       target="_blank"
       rel="noopener noreferrer"
-      className="project-link"
     >
-      GitHub
+      View Project
     </a>
-  </div>
-      </article>
-      <article class="project-card">
-        <h3>Shadowzee Portfolio</h3>
-        <p>This portfolio website showcases my frontend skills, with responsive design and clean UI.</p>
-        <a href="https://shadowzee123.github.io/Shadowzee-Portfolio/" class="project-link" target="_blank" rel="noopener noreferrer">View Project</a>
-      </article>
-      <article class="project-card">
-        <h3>Get A Job App</h3>
-        <p>A React-based job listing app with search and saved jobs functionality.</p>
-        <a href="https://shadowzee123.github.io/get-a-job/" class="project-link" target="_blank" rel="noopener noreferrer">View Project</a>
-      </article>
-      <article class="project-card">
-        <h3>RGB Color Game</h3>
-        <p>A simple interactive JavaScript game to guess RGB colors.</p>
-        <a href="https://shadowzee123.github.io/RGB-Game-Abba-Ado-Bawa/" class="project-link" target="_blank" rel="noopener noreferrer">View Project</a>
-      </article>
-      <article class="project-card">
-        <h3>Weather App</h3>
-        <p>A weather forecasting app using OpenWeather API to display current weather conditions.</p>
-        <a href="https://shadowzee123.github.io/shadow-weather/" class="project-link" target="_blank" rel="noopener noreferrer">View Project</a>
-      </article>
-      <article class="project-card">
-        <h3>Task Manager</h3>
-        <p>A task management tool with add, delete, and mark as completed functionality using localStorage.</p>
-        <a href="https://shadowzee123.github.io/Shadowzee/" class="project-link" target="_blank" rel="noopener noreferrer">View Project</a>
-      </article>
-      <article class="project-card">
-        <h3>Calculator</h3>
-        <p>A simple calculator app built with JavaScript, supporting basic arithmetic operations.</p>
-        <a href="https://shadowzee123.github.io/AZ-calculator/" class="project-link" target="_blank" rel="noopener noreferrer">View Project</a>
-      </article>
-      <article class="project-card">
-        <h3>Quiz App</h3>
-        <p>A simple Quiz app build with JavaScript, it users to test their knowledge and get a score</p>
-        <a href="https://shadowzee123.github.io/Quiz/" class="project-link" target="_blank" rel="noopener noreferrer">View Project</a>
-      </article>
-      <article class="project-card">
-        <h3>Capstone</h3>
-        <p>Gruop project for final DIF assignment. worked on homepage UI, Using React, Firebase,Tailwind CSS</p>
-        <a href="https://Odunsih1.github.io/dif-capstone/" class="project-link" target="_blank" rel="noopener noreferrer">View Project</a>
-       </article>
-        <article class="project-card">
-        <h3>Shadow-Shop</h3>
-        <p>A simple Jumia shop project for final DIF assignment. worked on homepage UI, Using React, Firebase,Tailwind CSS</p>
-            <a href="https://shadowzee123.github.io/shadowzee-shop/" class="project-link" target="_blank" rel="noopener noreferrer">View Project</a>
-      </article>
+
+  </article>
+
+
+  <!-- RGB COLOR GAME -->
+  <article class="project-card">
+
+    <h3>RGB Color Game</h3>
+
+    <p>
+      An interactive JavaScript game where users identify the
+      correct color based on RGB values.
+    </p>
+
+    <div class="project-tech">
+
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+
     </div>
-  </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section contact-section">
-    <h2>Contact Me</h2>
-    <form id="contactForm" novalidate>
-      <input type="text" id="name" name="name" placeholder="Your Name" required />
-      <input type="email" id="email" name="email" placeholder="Your Email" required />
-      <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit" class="btn">Send</button>
-      <p id="formMessage" aria-live="polite"></p>
-    </form>
-  </section>
+    <a
+      href="https://shadowzee123.github.io/RGB-Game-Abba-Ado-Bawa/"
+      class="project-link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      View Project
+    </a>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="social-icons">
-      <a href="https://github.com/shadowzee123" target="_blank" aria-label="GitHub" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/in/abba-ado-bawa" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:inuwashadow55@email.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+  </article>
+
+
+  <!-- WEATHER APP -->
+  <article class="project-card">
+
+    <h3>Weather App</h3>
+
+    <p>
+      A weather application that uses the OpenWeather API to
+      display current weather information and conditions.
+    </p>
+
+    <div class="project-tech">
+
+      <span>JavaScript</span>
+      <span>API</span>
+      <span>HTML</span>
+      <span>CSS</span>
+
     </div>
-    <p>© 2025 Abba Ado Bawa. All rights reserved.</p>
-  </footer>
 
-  <script src="script.js"></script>
-</body>
-</html>
+    <a
+      href="https://shadowzee123.github.io/shadow-weather/"
+      class="project-link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      View Project
+    </a>
+
+  </article>
 
 
+  <!-- TASK MANAGER -->
+  <article class="project-card">
 
+    <h3>Task Manager</h3>
+
+    <p>
+      A task management application with functionality for
+      creating, deleting, and completing tasks using localStorage.
+    </p>
+
+    <div class="project-tech">
+
+      <span>JavaScript</span>
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>LocalStorage</span>
+
+    </div>
+
+    <a
+      href="https://shadowzee123.github.io/Shadowzee/"
+      class="project-link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      View Project
+    </a>
+
+  </article>
+
+
+  <!-- CALCULATOR -->
+  <article class="project-card">
+
+    <h3>Calculator</h3>
+
+    <p>
+      A responsive calculator application supporting basic
+      arithmetic operations using JavaScript.
+    </p>
+
+    <div class="project-tech">
+
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+
+    </div>
+
+    <a
+      href="https://shadowzee123.github.io/AZ-calculator/"
+      class="project-link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      View Project
+    </a>
+
+  </article>
+
+
+  <!-- QUIZ APP -->
+  <article class="project-card">
+
+    <h3>Quiz App</h3>
+
+    <p>
+      An interactive quiz application that allows users to answer
+      questions, test their knowledge, and receive a final score.
+    </p>
+
+    <div class="project-tech">
+
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+
+    </div>
+
+    <a
+      href="https://shadowzee123.github.io/Quiz/"
+      class="project-link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      View Project
+    </a>
+
+  </article>
+
+
+  <!-- DIF CAPSTONE -->
+  <article class="project-card">
+
+    <h3>DIF Capstone</h3>
+
+    <p>
+      A collaborative social media project built with React,
+      Firebase, and Tailwind CSS. Contributed to the homepage UI
+      and responsive user interface.
+    </p>
+
+    <div class="project-tech">
+
+      <span>React</span>
+      <span>Firebase</span>
+      <span>Tailwind CSS</span>
+
+    </div>
+
+    <a
+      href="https://Odunsih1.github.io/dif-capstone/"
+      class="project-link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      View Project
+    </a>
+
+  </article>
+
+
+  <!-- SHADOW SHOP -->
+  <article class="project-card">
+
+    <h3>Shadow-Shop</h3>
+
+    <p>
+      An e-commerce shopping application inspired by modern
+      online marketplaces, built with React, Firebase, and
+      Tailwind CSS.
+    </p>
+
+    <div class="project-tech">
+
+      <span>React</span>
+      <span>Firebase</span>
+      <span>Tailwind CSS</span>
+
+    </div>
+
+    <a
+      href="https://shadowzee123.github.io/shadowzee-shop/"
+      class="project-link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      View Project
+    </a>
+
+  </article>
+
+
+</div>
+
+  </section>  <!-- ==================== CONTACT SECTION ==================== -->  <section id="contact" class="section contact-section"><h2>Contact Me</h2>
+
+<p>
+  Have a project, opportunity, or collaboration in mind?
+  Feel free to reach out.
+</p>
+
+<form id="contactForm" novalidate>
+
+  <input
+    type="text"
+    id="name"
+    name="name"
+    placeholder="Your Name"
+    required
+  />
+
+  <input
+    type="email"
+    id="email"
+    name="email"
+    placeholder="Your Email"
+    required
+  />
+
+  <textarea
+    id="message"
+    name="message"
+    placeholder="Your Message"
+    rows="5"
+    required
+  ></textarea>
+
+  <button
+    type="submit"
+    class="btn"
+  >
+    Send Message
+  </button>
+
+  <p
+    id="formMessage"
+    aria-live="polite"
+  ></p>
+
+</form>
+
+  </section>  <!-- ==================== FOOTER ==================== -->  <footer class="footer"><div class="social-icons">
+
+  <a
+    href="https://github.com/shadowzee123"
+    target="_blank"
+    aria-label="GitHub"
+    rel="noopener noreferrer"
+  >
+    <i class="fab fa-github"></i>
+  </a>
+
+  <a
+    href="https://linkedin.com/in/abba-ado-bawa"
+    target="_blank"
+    aria-label="LinkedIn"
+    rel="noopener noreferrer"
+  >
+    <i class="fab fa-linkedin"></i>
+  </a>
+
+  <a
+    href="mailto:aadobawa@gmail.com"
+    aria-label="Email"
+  >
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+
+</div>
+
+<p>
+  © 2026 Abba Ado Bawa. All rights reserved.
+</p>
+
+  </footer>  <!-- JavaScript -->  <script src="script.js"></script></body>
+  </html>
